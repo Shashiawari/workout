@@ -31,7 +31,7 @@ const Intro1 = () => {
   return (
     <div className="intro1">
       {loading ? (
-        <div className="preloader"><img src="https://res.cloudinary.com/dq7brjjnz/image/upload/v1713002113/f19b2f83-ed5c-46fd-92d2-2472fdf3b4a9.png" alt="img" className="img-fluid"></img>
+        <div className="preloader"><img src="https://res.cloudinary.com/dq7brjjnz/image/upload/v1713002893/6596ea9e-03b8-4483-8440-42be27b0a86c.png" alt="img" className="img-fluid"></img>
         <h1>Let's Begin</h1>
         </div>
       ) : (
