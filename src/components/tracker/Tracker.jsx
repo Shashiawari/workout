@@ -3,48 +3,46 @@ import "./tracker.css";
 import Track2 from "./Track2";
 import Main from "../main/Main";
 const Tracker = () => {
+  const [skipClicked, setSkipClicked] = useState(false);
+  const [skipClicked2, setSkipClicked2] = useState(false);
+  function handleSkip() {
+    setSkipClicked(true);
+  }
 
-    const [skipClicked, setSkipClicked] = useState(false);
-    const [skipClicked2, setSkipClicked2] = useState(false);
-    function handleSkip() {
-        setSkipClicked(true);
-      }
-    
-      if (skipClicked) {
-        return <Track2/>;
-      }
-      
+  if (skipClicked) {
+    return <Track2 />;
+  }
 
-    function handleSkip2() {
-        setSkipClicked2(true);
-      }
-    
-      if (skipClicked2) {
-        return <Main/>;
-      }
+  function handleSkip2() {
+    setSkipClicked2(true);
+  }
+
+  if (skipClicked2) {
+    return <Main />;
+  }
   return (
     <div className="tracker">
-    <div className="d-flex  align-items-center  t2 mb-5">
-    <svg
-    onClick={handleSkip2}
-      className="mx-4 ms-5 mb-1"
-      width="17"
-      height="20"
-      viewBox="0 0 7 10"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M6 9L1 5L6 1"
-        stroke="#2C2B2B"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
+      <div className="d-flex  align-items-center  t2 mb-5 text-center">
+        <svg
+          onClick={handleSkip2}
+          className="mx-4 ms-5 mb-1"
+          width="17"
+          height="20"
+          viewBox="0 0 7 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 9L1 5L6 1"
+            stroke="#2C2B2B"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
 
-    <h1 className="text-center ">Workout Tracker</h1>
-  </div>
+        <h1 className="text-center ">Workout Tracker</h1>
+      </div>
       <div className="chart text-center" onClick={handleSkip}>
         <svg
           width="343"
@@ -201,40 +199,44 @@ const Tracker = () => {
           />
         </svg>
       </div>
-      <div className="sq my-5 mx-4">
-        <svg
-          className="mx-2"
-          width="60"
-          height="60"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.575 3.21665L1.51667 15C1.37114 15.252 1.29414 15.5377 1.29333 15.8288C1.29251 16.1198 1.36791 16.4059 1.51202 16.6588C1.65614 16.9116 1.86394 17.1223 2.11476 17.2699C2.36558 17.4174 2.65067 17.4968 2.94167 17.5H17.0583C17.3493 17.4968 17.6344 17.4174 17.8852 17.2699C18.1361 17.1223 18.3439 16.9116 18.488 16.6588C18.6321 16.4059 18.7075 16.1198 18.7067 15.8288C18.7059 15.5377 18.6289 15.252 18.4833 15L11.425 3.21665C11.2764 2.97174 11.0673 2.76925 10.8177 2.62872C10.5681 2.48819 10.2864 2.41437 10 2.41437C9.71356 2.41437 9.43194 2.48819 9.18234 2.62872C8.93273 2.76925 8.72356 2.97174 8.575 3.21665Z"
-            stroke="#7E96FF"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10 7.5V10.8333"
-            stroke="#7E96FF"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10 14.1667H10.0083"
-            stroke="#7E96FF"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <p>You've burned fewer calories than yesterday. Time to get moving! </p>
+      <div className="text-center center">
+        <div className="sq my-5 mx-4">
+          <svg
+            className="mx-2"
+            width="60"
+            height="60"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.575 3.21665L1.51667 15C1.37114 15.252 1.29414 15.5377 1.29333 15.8288C1.29251 16.1198 1.36791 16.4059 1.51202 16.6588C1.65614 16.9116 1.86394 17.1223 2.11476 17.2699C2.36558 17.4174 2.65067 17.4968 2.94167 17.5H17.0583C17.3493 17.4968 17.6344 17.4174 17.8852 17.2699C18.1361 17.1223 18.3439 16.9116 18.488 16.6588C18.6321 16.4059 18.7075 16.1198 18.7067 15.8288C18.7059 15.5377 18.6289 15.252 18.4833 15L11.425 3.21665C11.2764 2.97174 11.0673 2.76925 10.8177 2.62872C10.5681 2.48819 10.2864 2.41437 10 2.41437C9.71356 2.41437 9.43194 2.48819 9.18234 2.62872C8.93273 2.76925 8.72356 2.97174 8.575 3.21665Z"
+              stroke="#7E96FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 7.5V10.8333"
+              stroke="#7E96FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 14.1667H10.0083"
+              stroke="#7E96FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            You've burned fewer calories than yesterday. Time to get moving!{" "}
+          </p>
+        </div>
       </div>
-      <div className="up d-flex align-items-center">
+      <div className="up d-flex  align-items-center justify-content-center" >
         <h3 className="mx-4" style={{ fontSize: "18px" }}>
           Upcoming Workout
         </h3>
@@ -280,7 +282,7 @@ const Tracker = () => {
         </div>
       </div>
       <div className="sqo">
-        <div className="sq2">
+        <div className="sq2 d-flex justify-content-center">
           <div className="yt ms-4">
             <p style={{ fontSize: "13px", fontWeight: "bold" }}>
               What Do You Want to Train
@@ -448,7 +450,6 @@ const Tracker = () => {
           </svg>
         </div>
       </div>
-      
     </div>
   );
 };
