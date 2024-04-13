@@ -1,0 +1,76 @@
+/* .Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    border: 2px solid;
+} */
+
+.text-form {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.lab {
+  color: #7f7f7f;
+  font-size: 15px;
+}
+
+input[type="checkbox"] {
+  border: none;
+  outline: none;
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  padding: 10px;
+}
+
+.create {
+  margin-top: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.button {
+  border: none;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  width: 343px;
+  height: 50px;
+  background: linear-gradient(270deg, #7b91ff 0%, #95beff 100%);
+  border-radius: 12px;
+}
+
+.t {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  margin-top: 30px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.log p a{
+    text-decoration: underline;
+}
+
+.input2{
+  
+   height: 34vh;
+}

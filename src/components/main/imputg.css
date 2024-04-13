@@ -1,0 +1,27 @@
+.formmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inp {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 12px;
+  font-weight: 600;
+  position: relative;
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: rgba(241, 241, 241, 1);
+}
+
+.inp input {
+  position: absolute;
+  left: 90%;
+}
+
+.set{
+    height: 60vh;
+}
